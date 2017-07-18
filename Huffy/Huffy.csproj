@@ -201,9 +201,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707181455471_Initial.cs" />
+    <Compile Include="Migrations\201707181455471_Initial.Designer.cs">
+      <DependentUpon>201707181455471_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707181528577_CreateStabTable.cs" />
+    <Compile Include="Migrations\201707181528577_CreateStabTable.Designer.cs">
+      <DependentUpon>201707181528577_CreateStabTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707181736055_OverrideConventionForStab&amp;Genre.cs" />
+    <Compile Include="Migrations\201707181736055_OverrideConventionForStab&amp;Genre.Designer.cs">
+      <DependentUpon>201707181736055_OverrideConventionForStab&amp;Genre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707181800219_PoPulateGenresTable.cs" />
+    <Compile Include="Migrations\201707181800219_PoPulateGenresTable.Designer.cs">
+      <DependentUpon>201707181800219_PoPulateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Stab.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -276,6 +296,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707181455471_Initial.resx">
+      <DependentUpon>201707181455471_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707181528577_CreateStabTable.resx">
+      <DependentUpon>201707181528577_CreateStabTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707181736055_OverrideConventionForStab&amp;Genre.resx">
+      <DependentUpon>201707181736055_OverrideConventionForStab&amp;Genre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707181800219_PoPulateGenresTable.resx">
+      <DependentUpon>201707181800219_PoPulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
