@@ -1,12 +1,20 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    margin-bottom:100px;
 }
 
+#topPadding{
+    margin-top:50px;
+    color: #ffd800;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom:100px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +29,78 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+/* Bootstrap Override */
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 50px;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 40px;
+}
+.navbar-inverse {
+    background-color: #ff4342;
+    border-color: #ff4342;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #640f0f;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #640f0f;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.form-control:focus {
+    border-color: #f02525;
+    box-shadow:none;
 }

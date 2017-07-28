@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Huffy.Models.Stab>
+
+@{
+    ViewBag.Title = "Stab";
+}
+
+<h2>My Upcoming stabs</h2>
+
+<ul>
+   @foreach (var stab in Model)
+   {
+    <li>
+        <div class="date">
+            <div class="month">@stab.DateTime.ToString("MMM")</div>
+            <div class="day">@stab.DateTime.ToString("d ")</div>
+        </div>
+        <div class="detail">
+            <div class="artist">@stab.Artist</div>
+            <div class="genre">@stab.Genre.Name</div>
+        </div>
+    </li>
+   }
+</ul>
+
