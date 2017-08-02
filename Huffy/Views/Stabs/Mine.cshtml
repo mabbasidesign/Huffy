@@ -6,13 +6,18 @@
 
 <h2>My Upcoming stabs</h2>
 
-<ul>
+<ul class="mohsen">
    @foreach (var stab in Model)
    {
     <li>
         <div class="date">
             <div class="month">@stab.DateTime.ToString("MMM")</div>
             <div class="day">@stab.DateTime.ToString("d ")</div>
+            <div class="actions">
+                <a href="@Url.Action("Edit", "Stabs", new { id = stab.Id })">
+                    Edit
+                </a>
+            </div>
         </div>
         <div class="detail">
             <div class="artist">@stab.Artist</div>
@@ -21,4 +26,5 @@
     </li>
    }
 </ul>
+
 

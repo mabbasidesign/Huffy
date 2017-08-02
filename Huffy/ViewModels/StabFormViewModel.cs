@@ -30,22 +30,7 @@ namespace Huffy.ViewModels
         public IEnumerable<Genre> Genres { get; set; }
 
         public string Heading { get; set; }
-
-        //public string Action
-        //{
-        //    get
-        //    {
-        //        Expression<Func<StabsController, ActionResult>> update =
-        //            (c => c.Update(this));
-
-        //        Expression<Func<StabsController, ActionResult>> create =
-        //            (c => c.Create(this));
-
-        //        var action = (Id != 0) ? update : create;
-        //        return (action.Body as MethodCallExpression).Method.Name;
-        //    }
-        //}
-
+        
         public DateTime GetDateTime()
         {
                 return DateTime.Parse(string.Format("{0}, {1}", Date, Time));

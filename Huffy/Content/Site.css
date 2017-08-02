@@ -31,6 +31,71 @@ textarea {
     max-width: 280px;
 }
 
+.voffset { margin-top: 2px; }
+.voffset1 { margin-top: 5px; }
+.voffset2 { margin-top: 10px; }
+.voffset3 { margin-top: 20px; }
+.voffset4 { margin-top: 40px; }
+.voffset5 { margin-top: 80px; }
+
+
+/*CSS Class*/
+.stabs {
+    list-style: none;
+}
+
+.stabs > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.stabs > li .date {
+    background: red;
+    color: white;
+    text-align: center;
+    width: 60px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.stabs > li .date .month {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+    .stabs > li .date .day {
+        background: #f7f7f7;
+        color: #333;
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+.stabs > li .details {
+    position: absolute;
+    top: 0;
+    left: 70px;    
+}
+
+    .stabs > li .details .artist {
+        font-weight: bold;
+        display: block;
+    }
+
+    .stabs > li .details .genre {
+        font-size: 15px;
+    }
+
+.stabs > li .actions {
+    font-size: 15px;
+    display: none;
+}
+
+.stabs > li:hover .actions {
+    display: block;
+}
+
 
 /* Bootstrap Override */
 

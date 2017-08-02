@@ -1,17 +1,18 @@
 ﻿@model Huffy.ViewModels.StabFormViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 
-<h2 id="topPadding">Create</h2>
+<h2 id="topPadding">Edit</h2>
 
-@using (Html.BeginForm("Create", "Stabs"))
+
+@using (Html.BeginForm("Edit", "Stabs"))
 {
     <p class="alert alert-info">All fields are <strong>required</strong>.</p>
 
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true, "", new { @class = "text-danger", autofocus= "autofocus" })
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
     <div class="form-group">
         @Html.LabelFor(m => m.Venue)
@@ -21,13 +22,13 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.Date)
-        @Html.TextBoxFor(m => m.Date, new { @class = "form-control", placeholder = "eg: 1 jan 2018" })
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Date)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.Time)
-        @Html.TextBoxFor(m => m.Time, new { @class = "form-control", placeholder = "eg: 20:00" })
+        @Html.TextBoxFor(m => m.Time, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Time)
     </div>
 

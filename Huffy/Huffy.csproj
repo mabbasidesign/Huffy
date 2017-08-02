@@ -295,6 +295,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Stabs\Create.cshtml" />
     <Content Include="Views\Stabs\Mine.cshtml" />
+    <Content Include="Views\Stabs\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

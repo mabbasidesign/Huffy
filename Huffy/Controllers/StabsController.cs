@@ -22,7 +22,7 @@ namespace Huffy.Controllers
         public ActionResult Mine()
         {
             var stab = _context.Stabs
-                .Include(global => global.Genre)
+                .Include(g => g.Genre)
                 .ToList();
             return View(stab);
         }
@@ -79,32 +79,30 @@ namespace Huffy.Controllers
                 Heading = "Edit",
             };
 
-            return RedirectToAction("Mine", "Stabs");
+            return View("Edit", viewModel);
         }
+
 
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Update(StabFormViewModel viewModel)
+        public ActionResult Edit(StabFormViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
                 viewModel.Genres = _context.Genres.ToList();
-                return View("Create", viewModel);
+                return View("Edit", viewModel);
             }
 
             var userId = User.Identity.GetUserId();
-            var stab = _context.Stabs.SingleOrDefault(u => u.Id == viewModel.Id && u.ArtistId == userId);
+            var stab = _context.Stabs.Single(u => u.Id == viewModel.Id && u.ArtistId == userId);
             stab.Venue = viewModel.Venue;
             stab.DateTime = viewModel.GetDateTime();
             stab.GenreId = viewModel.Genre;
 
-            _context.Stabs.Add(stab);
             _context.SaveChanges();
-            return RedirectToAction("Mine", "Stabs");
+            return RedirectToAction("Index", "Home");
         }
-
-
 
     }
 }
